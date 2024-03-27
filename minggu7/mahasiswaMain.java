@@ -10,7 +10,8 @@ public class mahasiswaMain {
         pencarianMahasiswa data = new pencarianMahasiswa();
         System.out.print("Masukan Jumlah Mahasiswa :");
         int jumMhs = s.nextInt();
-        data.listMhs = new mahasiswa[jumMhs];
+        mahasiswa[] inputan = new mahasiswa[jumMhs];
+        data.listMhs=inputan;
         System.out.println("=====================================================");
         System.out.println("Masukan data mahasiswa secara urut dari NIM terkecil ");
         for (int i = 0; i<jumMhs; i++){
@@ -33,18 +34,21 @@ public class mahasiswaMain {
         System.out.println("=======================================================");
         System.out.println("=======================================================");
         System.out.println("                       Pencarian Data                  ");
-        System.out.println("                    Masukan NIM mahasiswa              ");
-        System.out.print("NIM");
-        int cari = s.nextInt();
-        System.out.println("                 Menggunakan sequential search         ");
-        int posisi = data.findSeqSearch(cari);
+        System.out.println("                    Masukan nama mahasiswa              ");
+        System.out.print("NAMA");
+        String cari = sl.nextLine();
+        System.out.println("                 Menggunakan binary search         ");
+        int posisi = data.findBinarySearch(cari, 0, jumMhs-1);
 
-        data.tampilPosisi(cari, posisi);
-        data.tampilData(cari, posisi);
-        System.out.println("=======================================================");
-        System.out.println("                  Menggunakan Binary Search            ");
-        posisi = data.findBinarySearch(cari, 0, jumMhs -1);
-        data.tampilPosisi(cari, posisi);
-        data.tampilData(cari, posisi);
+        if(posisi==-1){
+            System.out.println("Pencarian menghasilkan lebih dari satu hasil");
+
+        }else if(posisi!=-1){
+            data.tampilPosisi(cari, posisi);
+            data.tampilData(cari, posisi);
+        }else{
+            System.out.println("Data "+ cari+"T idak ditemukan");
+        }
+        
     }
 }

@@ -8,7 +8,7 @@ public class mahasiswa {
     int umur;
     double ipk;
 
-    mahasiswa(int ni, String n, int u, double i){
+    public mahasiswa(int ni, String n, int u, double i){
         nim=ni;
         nama = n;
         umur = u;
