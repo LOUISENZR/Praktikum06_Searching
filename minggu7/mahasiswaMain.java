@@ -8,8 +8,9 @@ public class mahasiswaMain {
         Scanner sl = new Scanner(System.in);
 
         pencarianMahasiswa data = new pencarianMahasiswa();
-        int jumMhs = 5;
-
+        System.out.print("Masukan Jumlah Mahasiswa :");
+        int jumMhs = s.nextInt();
+        data.listMhs = new mahasiswa[jumMhs];
         System.out.println("=====================================================");
         System.out.println("Masukan data mahasiswa secara urut dari NIM terkecil ");
         for (int i = 0; i<jumMhs; i++){

@@ -27,7 +27,7 @@ public class sorting16 {
     }
     public static void main(String[] args) {
         int[] daftarNilai={10,5,20,15,5,45};
-        sequentialSearch(daftarNilai, 5);
+        sequentialSearch(daftarNilai, 30);
         int[] sortedNilai = {5,5,10,20,30,40,50};
         int index = binarySearchAsc(sortedNilai, 5);
 

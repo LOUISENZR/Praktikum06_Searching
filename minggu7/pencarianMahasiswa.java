@@ -51,7 +51,7 @@ public class pencarianMahasiswa {
             mid = (left +right)/2;
             if (cari == listMhs[mid].nim){
                 return(mid);
-            }else if(listMhs[mid].nim>cari){
+            }else if(listMhs[mid].nim<cari){
                 return findBinarySearch(cari, left, mid -1);
             }else{
                 return findBinarySearch(cari, mid +1, right);
