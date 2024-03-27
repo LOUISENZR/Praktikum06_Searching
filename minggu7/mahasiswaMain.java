@@ -32,14 +32,18 @@ public class mahasiswaMain {
         System.out.println("=======================================================");
         System.out.println("=======================================================");
         System.out.println("                       Pencarian Data                  ");
-        System.out.println("Masukan NIM mahasiswa");
+        System.out.println("                    Masukan NIM mahasiswa              ");
         System.out.print("NIM");
         int cari = s.nextInt();
-        System.out.println("menggunakan sequential search");
+        System.out.println("                 Menggunakan sequential search         ");
         int posisi = data.findSeqSearch(cari);
 
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
-
+        System.out.println("=======================================================");
+        System.out.println("                  Menggunakan Binary Search            ");
+        posisi = data.findBinarySearch(cari, 0, jumMhs -1);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
     }
 }
